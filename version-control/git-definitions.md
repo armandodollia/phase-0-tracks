@@ -13,3 +13,5 @@
 
 * What is a merge conflict?
   A merge conflict is when a file trying to be merged into a branch is different than the existing file in the branch, this requires for the conflicting versions of these two files to be rectified before merging.
+
+  Hello Emmanuel
