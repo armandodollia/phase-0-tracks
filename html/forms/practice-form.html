@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Practice</title>
+</head>
+<body>
+  <h1>Welcome to my form!</h1>
+
+  <form name="Form .1" action="success.html" method="post">
+    <div>
+      <label>Tortilla</label>
+      <select name="tortilla">
+        <option value="material">Flour</option>
+        <option value="material">Wheat</option>
+        <option value="material">Low-Carb</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Why do you love tacos</label>
+      <textarea cols="20" rows="3" name="love"></textarea>
+    </div>
+
+    <div>
+      <label>When is your birthday</label>
+      <input type="date" name="birthday">
+    </div>
+
+    <fieldset>
+      <legend>Ingredients</legend>
+        <p>
+          <label>
+          <input type="checkbox" name="ingredients" value="Beef">
+          Beef
+          </label>
+        </p>
+
+        <p>
+          <label>
+          <input type="checkbox" name="ingredients" value="Chicken">
+          Chicken
+          </label>
+        </p>
+
+        <p>
+          <label>
+          <input type="checkbox" name="ingredients" value="Pork">
+          Pork
+          </label>
+        </p>
+    </fieldset>
+
+    <div>
+      <label>Name your taco</label>
+      <input type="text" name="name">
+    </div>
+
+    <button type="submit">Save your Taco</button>
+  </form>
+</body>
+</html>
