@@ -1,0 +1,23 @@
+#octopus {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%);
+  z-index: 0;
+}
+
+#hat {
+  position: absolute;
+  top: 35px;
+  left: 51.5%;
+  transform: translate(-50%);
+  z-index: 1
+}
+
+#glasses {
+  position: absolute;
+  top: 198px;
+  left: 50.6%;
+  transform: translate(-50%);
+  z-index: 2;
+}
