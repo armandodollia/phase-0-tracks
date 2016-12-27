@@ -2,21 +2,21 @@ section#contact-info {
   font-size: .8em;
 }
 
-.job {
+section.job {
 background-color: #e9e5dc;
 margin-top: 15px;
 border-radius: 5px;
 padding: 10px;
 }
 
-.achievements {
+ul.achievements {
   font-size: .8em;
 }
 
-#contact-info:hover {
+section#contact-info:hover {
   font-size: 1.2em;
 }
 
-#work-experience li:nth-child(2) {
+section#work-experience ul li:nth-child(2) {
   color: blue;
 }
