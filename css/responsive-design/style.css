@@ -32,17 +32,36 @@ figcaption {
 }
 
 body {
-  width: 960px;
+  margin: auto;
+  max-width: 960px;
 }
 
 section#external-links {
-  width: 200px;
+  width: 20%;
   display: inline-block;
   vertical-align: top;
 }
 
 main {
-  width: 756px;
+  width: 79%;
   display: inline-block;
   vertical-align: top;
+}
+
+/*Syntax reference for changes to the page at certain width
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }*/
+
+@media screen and (max-width: 500px) {
+  section#external-links {
+    width: 100%;
+  }
+  section#external-links li {
+    display: inline;
+  }
+  main {
+    width: 100%;
+  }
 }
