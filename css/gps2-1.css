@@ -1,0 +1,50 @@
+body {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header h1 {
+  text-align: center;
+  color: purple;
+  text-decoration: underline;
+}
+
+.pikachu {
+  float: right;
+  width: 4%;
+}
+
+header {
+  max-width: 97%;
+  display: block;
+  background-color: #f4e1d2;
+  margin-bottom: 20px;
+}
+
+.column-1 {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #618685;
+
+;
+  max-width: 48%;
+  padding: 10px;
+  border: solid;
+}
+
+.column-2 {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #BAD433;
+  max-width: 48%;
+  padding: 10px;
+  border: solid;
+  padding-bottom: 30px;
+}
+
+footer {
+  max-width: 97%;
+  display: block;
+  background-color: #f4e1d2;
+  margin-top: 20px;
+}
