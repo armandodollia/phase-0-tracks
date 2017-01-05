@@ -24,5 +24,3 @@ else
   insurance = false
 end
 
-p garlic_averse
-p insurance
