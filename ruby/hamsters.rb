@@ -21,24 +21,18 @@ age = gets.chomp.to_i
 
 if age.to_s.empty?
   age = nil
-else
-  age = age
 end
 
 if adoptable
-  if age != nil
-    puts "#{hamster} likes a volume level of #{volume}, 
-          is a good candidate for adoption, and is approximately #{age} years old"
+  if age == 0
+    puts "#{hamster} likes a volume level of #{volume}, is a good candidate for adoption, and its age is unknown"
   else
-    puts "#{hamster} likes a volume level of #{volume}, 
-          is a good candidate for adoption, and its age is unknown"
+    puts "#{hamster} likes a volume level of #{volume}, is a good candidate for adoption, and is approximately #{age} years old"
   end
 else
-  if age != nil
-    puts "#{hamster} likes a volume level of #{volume}, 
-          is not a good candidate for adoption, and is approximately #{age} years old"
+  if age == 0
+    puts "#{hamster} likes a volume level of #{volume}, is not a good candidate for adoption, and its age is unknown"
   else
-    puts "#{hamster} likes a volume level of #{volume}, 
-          is not a good candidate for adoption, and its age is unknown"
+    puts "#{hamster} likes a volume level of #{volume}, is not a good candidate for adoption, and is approximately #{age} years old"
   end
 end
