@@ -49,8 +49,4 @@ Starting my car
 -wait for engine to start
 -put car into gear
 -release brake
-<<<<<<< HEAD
 -drive away
-=======
--drive away
->>>>>>> 9d375377ec8a152b50b1ca2533f4031822a77c6b
