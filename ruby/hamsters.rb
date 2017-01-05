@@ -9,7 +9,12 @@ puts "What color is the hamster's fur?"
 fur = gets.chomp.to_s
 
 puts "Is the hamster a good candidate for adoption y or n"
-candidate.to_s == 'y' ? true : false
+candidate = gets.chomp.to_s
+if candidate == "y"
+  adoptable = true
+else
+  adoptable = false
+end
 
 puts "What is the hamster's estimated age?"
 age = gets.chomp.to_i
