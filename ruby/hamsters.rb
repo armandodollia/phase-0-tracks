@@ -14,10 +14,8 @@ candidate = gets.chomp
 puts "What is the hamster's estimated age?"
 age = gets.chomp
 
-if age.blank?
+if age.to_s.empty?
   age = nil
 else
   age = age.to_i
 end
-
-puts age
