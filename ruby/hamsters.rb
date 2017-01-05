@@ -1,21 +1,21 @@
 ##ask user for hamster name and volume
 puts"What is the hamster's name?"
-hamster = gets.chomp
+hamster = gets.chomp.to_s
 
 puts "Please give me volume level from 1 to 10"
-volume = gets.chomp
+volume = gets.chomp.to_i
 
 puts "What color is the hamster's fur?"
-fur = gets.chomp
+fur = gets.chomp.to_s
 
 puts "Is the hamster a good candidate for adoption y or n"
-candidate = gets.chomp
+candidate.to_s == 'y' ? true : false
 
 puts "What is the hamster's estimated age?"
-age = gets.chomp
+age = gets.chomp.to_i
 
 if age.to_s.empty?
   age = nil
 else
-  age = age.to_i
+  age = age
 end
