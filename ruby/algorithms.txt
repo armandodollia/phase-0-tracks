@@ -1,0 +1,52 @@
+Elevator algorithm
+
+-look to the left then right of elevator door for button
+  -if button is on the left
+    -walk to the button
+  -if button is on the right
+    -walk to the button
+-look number of buttons on panel
+  -if there is one button
+    -press it
+    -wait for doors to open
+  -if there are two buttons
+    -look above buttons for floor number and store in current_floor file
+    -compare current_floor file with destination_floor file
+    -if destination_floor < current_floor
+      -press bottom button
+      -wait for doors to open
+    -if destination_floor > current_floor
+      -press top button
+      -wait for doors to open
+-once door open enter the elevator
+-look at floor buttons
+-press floor button that equals the value of destination_floor file
+-move to the back of the elevator and face door
+-wait for elevator to arrive and doors to open
+-exit elevator
+
+Starting my car
+
+-check pockets for car key
+  -if car key is there
+    -continue
+  -if car key is not there 
+    -walk to kitchen counter
+    -look for car key
+    -take car key and put in pocket
+-walk to the car's driver side
+-pull on driver side door handle
+  -if door opens
+    -get in driver seat
+  -else
+    -press lock button on door handle
+    -wait for beep
+    -pull on handle
+    -open car door
+    -get in driver seat
+-press brake pedal and maintain pressure
+-press start button
+-wait for engine to start
+-put car into gear
+-release brake
+-drive away
