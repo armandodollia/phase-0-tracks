@@ -24,3 +24,21 @@ if age.to_s.empty?
 else
   age = age
 end
+
+if adoptable
+  if age != nil
+    puts "#{hamster} likes a volume level of #{volume}, 
+          is a good candidate for adoption, and is approximately #{age} years old"
+  else
+    puts "#{hamster} likes a volume level of #{volume}, 
+          is a good candidate for adoption, and its age is unknown"
+  end
+else
+  if age != nil
+    puts "#{hamster} likes a volume level of #{volume}, 
+          is not a good candidate for adoption, and is approximately #{age} years old"
+  else
+    puts "#{hamster} likes a volume level of #{volume}, 
+          is not a good candidate for adoption, and its age is unknown"
+  end
+end
