@@ -62,9 +62,9 @@ while counter < employees
   else
     if age_match && (garlic_preference || insurance) && vampire == false
       puts "Probably not a vampire."
-    elsif age_match==false && (garlic_preference || insurance)
+    elsif age_match != true && (garlic_preference || insurance)
       puts "Probably a vampire."
-    elsif age_match==false && garlic_preference==false && insurance==false
+    elsif age_match != true && garlic_preference != true && insurance != true
       puts "Almost certainly a vampire."
     else
       puts "Results inconclusive"
@@ -74,3 +74,4 @@ while counter < employees
   ##Iterate counter by 1
   counter += 1
 end
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
