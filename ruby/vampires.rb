@@ -32,6 +32,15 @@ while counter < employees
     insurance = false
   end
 
+  allergy = nil
+  while allergy != sunshine || allergy != done
+    puts "Please name any allergies one at a time, type enter when done"
+    allergy = gets.chomp.to_s
+    if allergy == "sunshine"
+      vampire = true
+    end
+  end
+
   ##calculate age from birth year given
   calculated_age = Time.new.year - year
 
@@ -44,11 +53,11 @@ while counter < employees
 
   ##verify if user is vampire using if blocks and logic expressions
   if identifier == "Drake Cula" || identifier == "Tu Fang"
-    puts "Definitely a vampire."  
+    puts "Definitely a vampire."
   else
     if age_match && (garlic_preference || insurance)
       puts "Probably not a vampire."
-    elsif age_match==false && (garlic_preference || insurance)
+    elsif age_match==false && (garlic_preference || insurance || vampire)
       puts "Probably a vampire."
     elsif age_match==false && garlic_preference==false && insurance==false
       puts "Almost certainly a vampire."
