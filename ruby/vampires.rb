@@ -27,4 +27,10 @@ end
 ##calculate age from birth year given
 calculated_age = Time.new.year - year
 
-p calculated_age
+##test age match and store value
+if calculated_age == age
+  age_match = true
+else
+  age_match = false
+end
+
