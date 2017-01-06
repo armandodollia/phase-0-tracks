@@ -32,12 +32,15 @@ while counter < employees
     insurance = false
   end
 
-  allergy = nil
-  while allergy != sunshine || allergy != done
-    puts "Please name any allergies one at a time, type enter when done"
-    allergy = gets.chomp.to_s
-    if allergy == "sunshine"
+  ##begin until loop asking the user for allergies
+  allergy_input = nil ##sets initial value of user input
+  until allergy_input == "sunshine" || allergy_input == "done"
+    puts "Please name any allergies one at a time, type done when complete"
+    allergy_input = gets.chomp.to_s
+    if allergy_input == "sunshine"
       vampire = true
+    else
+      vampire = false
     end
   end
 
@@ -54,10 +57,12 @@ while counter < employees
   ##verify if user is vampire using if blocks and logic expressions
   if identifier == "Drake Cula" || identifier == "Tu Fang"
     puts "Definitely a vampire."
+  elsif vampire
+    puts "Probably a vampire."
   else
-    if age_match && (garlic_preference || insurance)
+    if age_match && (garlic_preference || insurance) && vampire == false
       puts "Probably not a vampire."
-    elsif age_match==false && (garlic_preference || insurance || vampire)
+    elsif age_match==false && (garlic_preference || insurance)
       puts "Probably a vampire."
     elsif age_match==false && garlic_preference==false && insurance==false
       puts "Almost certainly a vampire."
