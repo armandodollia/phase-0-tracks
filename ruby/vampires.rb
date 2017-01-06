@@ -34,15 +34,15 @@ else
   age_match = false
 end
 
-##verify if user is vampire
+##verify if user is vampire using if blocks and logic expressions
 if identifier == "Drake Cula" || identifier == "Tu Fang"
   puts "Definitely a vampire."  
 else
   if age_match && (garlic_preference || insurance)
     puts "Probably not a vampire."
-  elsif !(age_match && (garlic_preference || insurance))
+  elsif age_match==false && (garlic_preference || insurance)
     puts "Probably a vampire."
-  elsif !(age_match && garlic_preference && insurance)
+  elsif age_match==false && garlic_preference==false && insurance==false
     puts "Almost certainly a vampire."
   else
     puts "Results inconclusive"
