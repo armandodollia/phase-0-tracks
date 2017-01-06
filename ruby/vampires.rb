@@ -24,3 +24,7 @@ else
   insurance = false
 end
 
+##calculate age from birth year given
+calculated_age = Time.new.year - year
+
+p calculated_age
