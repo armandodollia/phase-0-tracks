@@ -4,37 +4,38 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-# "iNvEsTiGaTiOn".swapcase
+puts "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
-# "zom".insert(1, 'o')
-# "zom".tr('o', 'oo')
+puts "zom".insert(1, 'o')
+puts "zom".tr('o', 'oo')
 # => “zoom”
 
-# "enhance".center(15)
+puts "enhance".center(15)
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".upcase
+puts "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".concat(" suspects")
+puts "the usual".concat(" suspects")
 #=> "the usual suspects"
 
-# " suspects".prepend("the usual")
+puts " suspects".prepend("the usual")
 # => "the usual suspects"
 
-# "The case of the disappearing last letter".chomp[0...-1]
+puts "The case of the disappearing last letter".chomp[0...-1]
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".chomp[1..-1]
+puts "The mystery of the missing first letter".chomp[1..-1]
 # => "he mystery of the missing first letter"
 
-# "Elementary,    my   dear        Watson!".squeeze(" ")
+puts "Elementary,    my   dear        Watson!".squeeze(" ")
 # => "Elementary, my dear Watson!"
 
-# "z".ord
+puts "z".ord
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
+# it is the ascii code of the character
 
-# "How many times does the letter 'a' appear in this string?".count('a')
+puts "How many times does the letter 'a' appear in this string?".count('a')
 # => 4
