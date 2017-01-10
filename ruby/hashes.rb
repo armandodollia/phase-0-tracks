@@ -40,3 +40,39 @@ else
 end
 
 p client_info
+
+#ask user which key needs to be updated
+puts "Which key would you like to update?"
+response = gets.chomp.to_s
+symbol_response = response.to_sym
+
+if response == 'none'
+  p client_info
+
+elsif symbol_response == :name
+  puts "Enter the updated client name"
+  client_info[:name] = gets.chomp.to_s
+
+elsif symbol_response == :age
+  puts "Enter the updated client age"
+  client_info[:age] = gets.chomp.to_i
+
+elsif symbol_response == :number_of_children
+  puts "Enter the client's updated number of children"
+  client_info[:number_of_children] = gets.chomp.to_i
+
+elsif symbol_response == :decor_theme
+  puts "Enter the updated decor theme"
+  client_info[:decor_theme] = gets.chomp.to_s
+
+elsif symbol_response == :is_colorblind
+  puts "Is the client colorblind?"
+
+  if gets.chomp.to_s == "yes"
+    client_info[:is_colorblind] = true
+  else
+    client_info[:is_colorblind] = false
+  end
+end
+
+p client_info
