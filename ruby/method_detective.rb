@@ -8,7 +8,6 @@ puts "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
 puts "zom".insert(1, 'o')
-puts "zom".tr('o', 'oo')
 # => “zoom”
 
 puts "enhance".center(15)
