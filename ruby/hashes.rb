@@ -32,6 +32,7 @@ client_info[:number_of_children] = gets.chomp.to_i
 puts "What decor theme does the client prefer?"
 client_info[:decor_theme] = gets.chomp.to_s
 
+#convert user input to a boolean value using if else block
 puts "Is the client colorblind?"
 if gets.chomp.to_s == "yes"
   client_info[:is_colorblind] = true
