@@ -31,6 +31,8 @@ end
 
 p student_data_array
 
+#BEGIN ARRAY MODIFICATION FUNCTIONS
+
 grades = [80, 70, 59, 63, 45, 98, 95, 75, 23, 5, 0]
 
 def failing_grades (student_grades)
@@ -56,3 +58,19 @@ def reject_grades(student_grades)
 end
 
 p reject_grades(grades)
+
+#BEGIN HASH MODIFICATION FUNCTIONS
+
+pant_inch_sizes = {
+	s: 32,
+	m: 34,
+	l: 36,
+	xl: 38,
+	xxl: 40
+}
+
+def bigger_than_large (pant_inch_sizes)
+	pant_inch_sizes.dup.delete_if {|size, circumference| circumference < 36}
+end
+
+p bigger_than_large(pant_inch_sizes)
