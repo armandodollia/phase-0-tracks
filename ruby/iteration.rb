@@ -8,3 +8,4 @@ student_info = {
 	peanut_alergy: true
 }
 
+student_names.each {|index| puts "The student's name is #{index}"}
