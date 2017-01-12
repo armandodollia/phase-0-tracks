@@ -50,3 +50,9 @@ def odd_grades(student_grades)
 end
 
 p odd_grades(grades)
+
+def reject_grades(student_grades)
+	student_grades.drop_while {|score| score.even?}
+end
+
+p reject_grades(grades)
