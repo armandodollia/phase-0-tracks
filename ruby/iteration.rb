@@ -30,3 +30,11 @@ student_data_array = student_info.map do |student_data, value|
 end
 
 p student_data_array
+
+grades = [80, 70, 59, 63, 45, 98, 95, 75, 23, 5, 0]
+
+def failing_grades (grades)
+	grades.delete_if {|score| score >= 70}
+end
+
+p failing_grades(grades)
