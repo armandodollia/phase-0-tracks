@@ -44,3 +44,9 @@ def passing_grades(student_grades)
 end
 
 p passing_grades(grades)
+
+def odd_grades(student_grades)
+	student_grades.select {|score| score.odd?}
+end
+
+p odd_grades(grades)
