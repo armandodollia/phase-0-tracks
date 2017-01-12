@@ -70,7 +70,13 @@ pant_inch_sizes = {
 }
 
 def bigger_than_large (pant_inch_sizes)
-	pant_inch_sizes.dup.delete_if {|size, circumference| circumference < 36}
+	pant_inch_sizes.dup.delete_if {|size, circumference| circumference <= 36}
 end
 
 p bigger_than_large(pant_inch_sizes)
+
+def smaller_than_large (pant_inch_sizes)
+	pant_inch_sizes.dup.keep_if {|size, circumference| circumference < 36}
+end
+
+p smaller_than_large(pant_inch_sizes)
