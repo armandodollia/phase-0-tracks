@@ -1,11 +1,13 @@
 student_names = ["Andy", "John", "Charlie", "Donna", "Eduardo"]
 
 student_info = {
-	school: "UIC",
-	age: "20",
-	sex: "Male",
-	credits: "45",
-	peanut_alergy: true
+	School: "UIC",
+	Age: "20",
+	Sex: "Male",
+	Credits: "45",
+	Peanut_alergy: true
 }
 
-student_names.each {|index| puts "The student's name is #{index}"}
+student_names.each {|student| puts "The student's name is #{student}"}
+
+student_info.each {|student_data, value| puts "#{student_data} = #{value}"}
