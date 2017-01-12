@@ -80,3 +80,9 @@ def smaller_than_large (pant_inch_sizes)
 end
 
 p smaller_than_large(pant_inch_sizes)
+
+def smaller_than_xl (pant_inch_sizes)
+	pant_inch_sizes.select {|size, circumference| circumference <= 36}
+end
+
+p smaller_than_xl(pant_inch_sizes)
