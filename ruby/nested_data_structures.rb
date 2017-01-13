@@ -21,3 +21,5 @@ stadium = {
 		"Section 3" => ['Seats', 'Fans', 'Hot Dogs', 'Burgers']
 	}
 }
+
+puts stadium["stands"]["Section 1"][3] 
