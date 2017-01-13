@@ -40,9 +40,10 @@ end
 #Create array of elements
 
 #define bubble sort method accepting the array to be sorted
-
-
-#define itteration method
+	#define swapped object and set to true
+	#start loop
+		#set boolean value swapped to false
+		
 
 
 
