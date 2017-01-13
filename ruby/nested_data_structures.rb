@@ -10,6 +10,7 @@
 		#add people and seats to sections
 
 #BUILD HASH
+#Driver code
 
 stadium = {
 	"Locker Room" => ['Benches', 'Lockers', 'Towels'],
@@ -22,4 +23,8 @@ stadium = {
 	}
 }
 
-puts stadium["stands"]["Section 1"][3] 
+#UI Code
+puts stadium["stands"]["Section 1"][3]
+puts stadium["Locker Room"][2]
+puts stadium["Bathroom"][4]
+puts stadium["Manager's office"][3].upcase
