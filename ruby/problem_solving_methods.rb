@@ -34,3 +34,29 @@ if calculated_sequence[-1] == 218922995834555169026 #Check last value for match
 else
 	puts "Fix your code! #{calculated_sequence[-1]} does not equal 218922995834555169026"
 end
+
+#Bubble sort
+
+#Create array of elements
+
+#define bubble sort method accepting the array to be sorted
+
+
+#define itteration method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
