@@ -21,22 +21,56 @@
 				#replace with 'b'
 	#return scrambled array
 
-def alias (full_name)
-	splitter(full_name.downcase)
+def aliase (full_name)
+	return splitter(full_name.downcase)
 end
 
 def splitter (full_name)
 	first_name_arr = full_name.split(' ')[0].chars
 	last_name_arr = full_name.split(' ')[1].chars
 
-	first_name_scrambled =  scrambler(first_name_arr)
+	first_name_scrambled << scrambler(first_name_arr)
 	first_name_scrambled[0] = first_name_scrambled[0].upcase
-	first_name_scrambled = first_name_scrambled.join
+	first_name_scrambled = first_name_scrambled.join('')
 
-	last_name_scrambled =  scrambler(last_name_arr)
-	last_name_scrambled[0] = first_name_scrambled[0].upcase
-	last_name_scrambled = first_name_scrambled.join
+	last_name_scrambled << scrambler(last_name_arr)
+	last_name_scrambled[0] = last_name_scrambled[0].upcase
+	last_name_scrambled = last_name_scrambled.join('')
+
+	encoded_name = last_name_scrambled + " " + first_name_scrambled
+
+	return encoded_name
 end
 
 def scrambler (name_arr)
+	vowels = ['a', 'e', 'i', 'o', 'u']
+	consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm' 'n', 'p', 'q', 'r', 's', 't', 'v', 'x', 'w', 'y', 'z']
+
+	name_arr.each do |letter|
+		if vowels.index(letter) != nil
+			if letter == 'u'
+				letter == 'a'
+			else
+				letter = vowels[vowels.index(letter) + 1]
+			end
+		elsif consonants.index(letter) != nil
+			if letter == 'z'
+				letter == 'b'
+			else
+				letter = consonants[consonants.index(letter) + 1]
+			end
+		end
+		return name_arr
+	end
 end
+
+
+
+
+
+
+p aliase ("Armando Dollia")
+
+
+
+
