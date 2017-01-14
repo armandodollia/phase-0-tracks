@@ -44,7 +44,7 @@ def scrambler (name_arr)
 	vowels = ['a', 'e', 'i', 'o', 'u']
 	consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'x', 'w', 'y', 'z']
 
-	name_arr.map do |letter|		
+	name_arr.map do |letter|
 		if vowels.include?(letter)
 			next_index_vowels = (vowels.index(letter).to_i + 1) % vowels.length
 			vowels[next_index_vowels]
@@ -56,13 +56,15 @@ def scrambler (name_arr)
 	end
 end
 
-testing = "Armando Dollia"
 
+#User Interface
 
+puts "Please enter the name to be encoded, type 'quit' when done"
 
-p alias_generator (testing)
-p testing
-
+until name_input == 'quit'
+	name_input = gets.chomp
+	encoded_name = alias_generator(name_input)
+end
 
 
 
