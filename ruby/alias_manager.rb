@@ -56,10 +56,6 @@ def scrambler (name_arr)
 	end
 end
 
-def alias_printer (paired_name_nested_array)
-	paired_name_nested_array.each do |paired_name_array|
-		"#{paired_name_nested_array[0]} is also known as #{paired_name_nested_array[1]}"
-end
 
 #User Interface
 
@@ -71,13 +67,14 @@ paired_name_array = []
 until name_input == 'quit'
 	name_input = gets.chomp
 		if name_input == 'quit'
-			puts "Thank you for using our wonderful service"
+			puts "Thank you for using our alias generator, here are all of your inputs:"
+			paired_name_nested_array.each do |paired_name_array|
+				puts "#{paired_name_array[0]} is also known as #{paired_name_array[1]}"
+			end
 		else
 			encoded_name = alias_generator(name_input)
-			puts "#{encoded_name}"
+			puts "#{encoded_name}" #can easily be removed since data is displayed above
 			paired_name_nested_array << (paired_name_array[0], paired_name_array[1] = name_input, encoded_name)
 		end
 end
-
-puts alias_printer(paired_name_nested_array)
 
