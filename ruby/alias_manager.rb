@@ -59,11 +59,17 @@ end
 
 #User Interface
 
-puts "Please enter the name to be encoded, type 'quit' when done"
+puts "Please enter the first and last name to be encoded, type 'quit' when done"
+name_input = ''
 
 until name_input == 'quit'
 	name_input = gets.chomp
-	encoded_name = alias_generator(name_input)
+		if name_input == 'quit'
+			puts "Thank you for using our wonderful service"
+		else
+			encoded_name = alias_generator(name_input)
+		puts "#{encoded_name}"
+		end
 end
 
 
