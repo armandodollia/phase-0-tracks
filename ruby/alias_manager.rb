@@ -61,6 +61,8 @@ end
 
 puts "Please enter the first and last name to be encoded, type 'quit' when done"
 name_input = ''
+paired_name_nested_array = []
+paired_name_array = []
 
 until name_input == 'quit'
 	name_input = gets.chomp
@@ -68,7 +70,9 @@ until name_input == 'quit'
 			puts "Thank you for using our wonderful service"
 		else
 			encoded_name = alias_generator(name_input)
-		puts "#{encoded_name}"
+			puts "#{encoded_name}"
+			paired_name_array[0], paired_name_array[1] = name_input, encoded_name
+			p paired_name_array
 		end
 end
 
