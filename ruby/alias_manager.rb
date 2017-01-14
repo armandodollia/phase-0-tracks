@@ -1,7 +1,7 @@
 #Create alias method accepting name
 	#call splitter method feeding it all lowercase name
 
-#Create splitter method accepting an array
+#Create splitter method accepting a string
 	#Split first and last name into array using .split(' ') and store index[0].chars to first_name_arr
 	#Split first and last name into array using .split(' ') and store index[1].chars to last_name_arr
 	#call scrambler(first_name_arr)[0].upcase.join and store to first_name_scrambled
@@ -20,3 +20,23 @@
 			#if letter is 'z'
 				#replace with 'b'
 	#return scrambled array
+
+def alias (full_name)
+	splitter(full_name.downcase)
+end
+
+def splitter (full_name)
+	first_name_arr = full_name.split(' ')[0].chars
+	last_name_arr = full_name.split(' ')[1].chars
+
+	first_name_scrambled =  scrambler(first_name_arr)
+	first_name_scrambled[0] = first_name_scrambled[0].upcase
+	first_name_scrambled = first_name_scrambled.join
+
+	last_name_scrambled =  scrambler(last_name_arr)
+	last_name_scrambled[0] = first_name_scrambled[0].upcase
+	last_name_scrambled = first_name_scrambled.join
+end
+
+def scrambler (name_arr)
+end
