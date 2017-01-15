@@ -60,11 +60,9 @@ def bubble_sort(unsorted_array)
 
 		(array_length - 1).times do |array_index|
 
-			if unsorted_array[array_index] >= unsorted_array[array_index + 1]
+			if unsorted_array[array_index] > unsorted_array[array_index + 1]
 				unsorted_array[array_index], unsorted_array[array_index + 1] = unsorted_array[array_index + 1], unsorted_array[array_index]
 				swapped = true
-			else
-				swapped = false
 			end
 		end
 	end
