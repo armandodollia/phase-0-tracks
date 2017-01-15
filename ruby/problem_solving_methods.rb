@@ -52,5 +52,23 @@ end
 test_arr = [9, 8, 12, 56, 3, 60, 35, 56, 34]
 
 def bubble_sort(unsorted_array)
-	
+	swapped = true
+
+	until swapped == false
+		swapped = false
+		array_length = unsorted_array.length.to_i
+
+		(array_length - 1).times unsorted_array do |number|
+			number_index = unsorted_array.index(number).to_i
+
+			if number <= unsorted_array[number.index.to_i + 1]
+				unsorted_array[number_index], unsorted_array[number_index + 1] = unsorted_array[number_index + 1], unsorted_array[number_index]
+				swapped = true
+			end
+		end
+	end
+
+	unsorted_array
 end
+
+p bubble_sort(test_arr)
