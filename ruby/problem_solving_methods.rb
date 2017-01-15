@@ -28,7 +28,7 @@ end
 # Output => an array of numbers
 
 #Test if results are correct
-calculated_sequence = fib(100) #Store arary to a variable (Takes a while tomcompute multiple times)
+calculated_sequence = fib(100) #Store array to a variable (Takes a while to compute multiple times)
 if calculated_sequence[-1] == 218922995834555169026 #Check last value for match
 	puts "It Works!!! #{calculated_sequence[-1]} equals 218922995834555169026"
 else
@@ -37,27 +37,37 @@ end
 
 #Bubble sort
 
-#Create array of elements
+#Create array of numbers
 
 #define bubble sort method accepting the array to be sorted
 	#define swapped object and set to true
-	#start loop
+	#start until loop and set to terminate when swapped is false
 		#set boolean value swapped to false
-		
+		#iterate through each element of the array
+			#if the next element is equal or bigger
+				#swap the two
+				#set swapped to true
+	#return sorted array
 
+test_arr = [9, 8, 12, 56, 3, 60, 35, 56, 34]
 
+def bubble_sort(unsorted_array)
+	swapped = true
 
+	until swapped == false
+		swapped = false
+		array_length = unsorted_array.length.to_i
 
+		(array_length - 1).times do |array_index|
 
+			if unsorted_array[array_index] > unsorted_array[array_index + 1]
+				unsorted_array[array_index], unsorted_array[array_index + 1] = unsorted_array[array_index + 1], unsorted_array[array_index]
+				swapped = true
+			end
+		end
+	end
 
+	unsorted_array
+end
 
-
-
-
-
-
-
-
-
-
-
+p bubble_sort(test_arr)
