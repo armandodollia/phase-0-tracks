@@ -14,6 +14,11 @@ class Puppy
   def roll_over
     puts "*rolls over*"
   end
+
+  #define dog years calculator and output number of dog years
+  def dog_years(human_years)
+    human_years * 7
+  end
 end
 
 
@@ -23,3 +28,4 @@ fido.fetch("bone")
 
 fido.speak(3)
 fido.roll_over
+puts fido.dog_years(5)
