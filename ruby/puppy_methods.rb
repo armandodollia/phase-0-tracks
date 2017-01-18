@@ -1,4 +1,5 @@
 class Puppy
+
   #build initialize method
   def initialize
     puts "Initializing new puppy instance..."
@@ -32,6 +33,37 @@ class Puppy
   end
 
 end
+
+class Kitten
+
+  def initialize
+    puts 'Initializing new kitten instance...'
+  end
+
+  def play(toy)
+    if toy.downcase == 'yarn'
+      puts 'Swats ball of yarn'
+    elsif toy.downcase == 'laser pointer'
+      puts 'Chases the dot'
+    elsif toy.downcase == 'dangler'
+      puts 'Jumps at the dangler'
+    end     
+  end
+
+  def needs_to_poop(is_it_full)
+    if is_it_full
+      puts 'Goes to litter box'
+    end
+  end
+
+  def needs_to_sleep(tired)
+    if tired
+      puts 'Takes a nap'
+    end
+  end
+  
+end
+
 
 
 #Driver Code
