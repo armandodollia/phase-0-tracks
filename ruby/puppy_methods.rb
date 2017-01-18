@@ -10,6 +10,10 @@ class Puppy
     repetitions.times {puts "Woof!"}
   end
 
+  #Define roll over method
+  def roll_over
+    puts "*rolls over*"
+  end
 end
 
 
@@ -18,3 +22,4 @@ fido = Puppy.new
 fido.fetch("bone")
 
 fido.speak(3)
+fido.roll_over
