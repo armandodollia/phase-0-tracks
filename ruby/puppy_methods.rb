@@ -19,6 +19,14 @@ class Puppy
   def dog_years(human_years)
     human_years * 7
   end
+
+  #define beg_for_food method accepting a boolean
+  def beg_for_food(food_served)
+    if food_served
+      puts "Whimper"
+    end
+  end
+
 end
 
 
@@ -29,3 +37,5 @@ fido.fetch("bone")
 fido.speak(3)
 fido.roll_over
 puts fido.dog_years(5)
+fido.beg_for_food(false)
+fido.beg_for_food(true)
