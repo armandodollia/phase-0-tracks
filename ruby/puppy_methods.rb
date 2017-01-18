@@ -84,6 +84,7 @@ kitten_array = []
 #creates 50 instances of kitten using loop
 50.times {kitten_array << Kitten.new}
 
+#Prints array to makes sure there are instances of kitten in it
 #p kitten_array
 
 #iterate through and call methods of class Kitten
