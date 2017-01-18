@@ -61,7 +61,7 @@ class Kitten
       puts 'Takes a nap'
     end
   end
-  
+
 end
 
 
@@ -77,3 +77,23 @@ fido.beg_for_food(false)
 fido.beg_for_food(true)
 
 spot = Puppy.new
+
+#instantiates kitten_array array
+kitten_array = []
+
+#creates 50 instances of kitten using loop
+50.times {kitten_array << Kitten.new}
+
+#p kitten_array
+
+
+
+
+
+
+
+
+
+
+
+
