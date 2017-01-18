@@ -86,8 +86,12 @@ kitten_array = []
 
 #p kitten_array
 
-
-
+#iterate through and call methods of class Kitten
+kitten_array.each do |kitten_instance|
+  kitten_instance.play('yarn')
+  kitten_instance.needs_to_poop(true)
+  kitten_instance.needs_to_sleep(true)
+end
 
 
 
