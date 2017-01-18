@@ -1,4 +1,8 @@
 class Puppy
+  #build initialize method
+  def initialize
+    puts "Initializing new puppy instance..."
+  end
 
   def fetch(toy)
     puts "I brought back the #{toy}!"
@@ -39,3 +43,5 @@ fido.roll_over
 puts fido.dog_years(5)
 fido.beg_for_food(false)
 fido.beg_for_food(true)
+
+spot = Puppy.new
