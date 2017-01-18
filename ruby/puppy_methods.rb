@@ -7,3 +7,7 @@ class Puppy
 
 end
 
+
+#Driver Code
+fido = Puppy.new
+fido.fetch("bone")
