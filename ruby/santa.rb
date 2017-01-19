@@ -16,10 +16,14 @@ class Santa
     puts "That was a good #{cookie_type}!"
   end
 
+  def celebrate_birthday
+    @age += 1
+  end
+
 
 end
 
-#santa = Santa.new
+santa = Santa.new("potato", "Brown", nil)
 #santa.speak
 #santa.eat_milk_and_cookies("Thin Mint")
 
@@ -32,4 +36,7 @@ example_genders.length.times do |i|
   santas << Santa.new(example_genders[i], example_ethnicities[i], i)
 end
 
-p santas
+#p santas
+
+santa.celebrate_birthday
+p santa
