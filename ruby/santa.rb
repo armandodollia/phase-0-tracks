@@ -24,6 +24,10 @@ class Santa
     @raindeer_ranking.insert(@raindeer_ranking.length.to_i - 1, @raindeer_ranking.delete_at(@raindeer_ranking.index(reindeer)))
   end
 
+  def gender=(gender)
+    @gender = gender
+  end
+
 end
 
 santa = Santa.new("potato", "Grounder", 23)
@@ -41,4 +45,5 @@ end
 
 #p santas
 santa.get_mad_at("Rudolph")
+santa.gender = "peanut"
 p santa
