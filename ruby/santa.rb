@@ -28,23 +28,14 @@ class Santa
 
 end
 
-santa = Santa.new("potato", "Grounder", 23)
-#santa.speak
-#santa.eat_milk_and_cookies("Thin Mint")
+# Driver Code
 
-
-santas = []
 example_genders = ["potato", "carrot", "broccoli", "male", "female", "super"]
 example_ethnicities = ["Latino", "White", "Red Martian", "White Martian", "Pan-Ethnic", "Sayan"]
 
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i], i)
+15.times do
+  santa = Santa.new(example_genders[rand(example_genders.length)], example_ethnicities(rand(example_ethnicities.length), rand(140)))
+  p santa.age
+  p santa.ethnicity
+  p santa.gender
 end
-
-#p santas
-santa.get_mad_at("Rudolph")
-santa.gender = "peanut"
-santa.celebrate_birthday
-p santa
-p santa.age
-p santa.ethnicity
