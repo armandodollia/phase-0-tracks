@@ -28,6 +28,14 @@ class Santa
     @gender = gender
   end
 
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity
+  end
+
 end
 
 santa = Santa.new("potato", "Grounder", 23)
@@ -46,4 +54,7 @@ end
 #p santas
 santa.get_mad_at("Rudolph")
 santa.gender = "peanut"
+santa.celebrate_birthday
 p santa
+p santa.age
+p santa.ethnicity
