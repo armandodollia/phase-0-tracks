@@ -24,7 +24,7 @@ class Santa
     @raindeer_ranking.insert(@raindeer_ranking.length.to_i - 1, @raindeer_ranking.delete_at(@raindeer_ranking.index(reindeer)))
   end
 
-  def gender=(gender)
+  def gender=(new_gender)
     @gender = gender
   end
 
