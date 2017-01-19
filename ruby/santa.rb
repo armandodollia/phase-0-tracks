@@ -20,10 +20,13 @@ class Santa
     @age += 1
   end
 
+  def get_mad_at(reindeer)
+    @raindeer_ranking.insert(@raindeer_ranking.length.to_i - 1, @raindeer_ranking.delete_at(@raindeer_ranking.index(reindeer)))
+  end
 
 end
 
-santa = Santa.new("potato", "Brown", nil)
+santa = Santa.new("potato", "Grounder", 23)
 #santa.speak
 #santa.eat_milk_and_cookies("Thin Mint")
 
@@ -37,6 +40,5 @@ example_genders.length.times do |i|
 end
 
 #p santas
-
-santa.celebrate_birthday
+santa.get_mad_at("Rudolph")
 p santa
