@@ -33,7 +33,7 @@ end
 example_genders = ["potato", "carrot", "broccoli", "male", "female", "super"]
 example_ethnicities = ["Latino", "White", "Red Martian", "White Martian", "Pan-Ethnic", "Sayan"]
 
-1500000.times do
+15000.times do
   santa = Santa.new(example_genders[rand(example_genders.length.to_i - 1)], example_ethnicities[rand(example_ethnicities.length.to_i - 1)], rand(140))
   p santa.age
   p santa.ethnicity
