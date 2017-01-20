@@ -7,3 +7,7 @@ module Shout
     "YAY!!! " + words + " :)"
   end
 end
+
+#driver code
+puts Shout.yell_happily("We have ice cream")
+puts Shout.yell_angrily("You kick my dog")
