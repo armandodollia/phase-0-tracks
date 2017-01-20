@@ -28,12 +28,16 @@
 # steps: iterate through hash, printing each value in a string
 # output: a string 
 
+def print_grocery_list(grocery_list)
+  grocery_list.each {|item, quantity| puts "#{item}, qty: #{quantity}"}
+end
+
 def list_creator(string_items)
   string_items_array = string_items.split(" ")
   grocery_list = {} 
   string_items_array.each {|item| grocery_list[item] = 0}
-  p grocery_list
-  grocery_list 
+  print_grocery_list(grocery_list)
+  grocery_list
 end
 
 grocery_list = list_creator("potato tomato orange beans peppers")
@@ -46,10 +50,6 @@ end
 def remove_item(grocery_list, item_to_remove)
   grocery_list.delete(item_to_remove)
   grocery_list
-end
-
-def print_grocery_list(grocery_list)
-  grocery_list.each {|item, quantity| puts "#{item}, qty: #{quantity}"}
 end
 
 p add_update_item(grocery_list, "tomato", 30)
