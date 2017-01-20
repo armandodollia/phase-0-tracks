@@ -43,4 +43,10 @@ def add_item(grocery_list, new_item, quantity = 0)
   grocery_list
 end
 
+def remove_item(grocery_list, item_to_remove)
+  grocery_list.delete(item_to_remove)
+  grocery_list
+end
+
 p add_item(grocery_list, "carrots")
+p remove_item(grocery_list, "potato")
