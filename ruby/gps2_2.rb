@@ -38,7 +38,7 @@ end
 
 grocery_list = list_creator("potato tomato orange beans peppers")
 
-def add_item(grocery_list, new_item, quantity = 0)
+def add_update_item(grocery_list, new_item, quantity = 0)
   grocery_list[new_item] = quantity
   grocery_list
 end
@@ -48,5 +48,10 @@ def remove_item(grocery_list, item_to_remove)
   grocery_list
 end
 
-p add_item(grocery_list, "carrots")
+def print_grocery_list(grocery_list)
+  grocery_list.each {|item, quantity| puts "#{item}, qty: #{quantity}"}
+end
+
+p add_update_item(grocery_list, "tomato", 30)
 p remove_item(grocery_list, "potato")
+print_grocery_list(grocery_list)
