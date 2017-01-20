@@ -36,4 +36,11 @@ def list_creator(string_items)
   grocery_list 
 end
 
-list_creator("potato tomato orange beans peppers")
+grocery_list = list_creator("potato tomato orange beans peppers")
+
+def add_item(grocery_list, new_item, quantity = 0)
+  grocery_list[new_item] = quantity
+  grocery_list
+end
+
+p add_item(grocery_list, "carrots")
