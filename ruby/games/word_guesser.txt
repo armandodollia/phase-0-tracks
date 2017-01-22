@@ -17,4 +17,3 @@ Create guess method that accepts a string
 
 Create array converter method accepting a string
   convert and return converted array
-
