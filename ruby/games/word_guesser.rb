@@ -18,4 +18,16 @@ class Word_guesser
   def underscore_array_creator(length)
     length.times {@guessed_letters_array << "_"}
   end
+
+  def word_checker(guessed_word)
+    if @word == guessed_word
+      @guessed_correctly = true
+      @attempts += 1
+      @guessed_correctly
+    else
+      @guessed_correctly = false
+      @attempts += 1
+      @guessed_correctly
+    end
+  end
 end
