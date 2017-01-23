@@ -1,5 +1,5 @@
 class Word_guesser
-  attr_reader :attempts, :word_length, :guessed_correctly, :word, :guessed_letters_array
+  attr_reader :attempts, :word_length
 
   def initialize(word)
     @attempts = 0
@@ -8,7 +8,6 @@ class Word_guesser
     @guessed_letter = ""
     @word_length = word.length
     @guessed_letters_array = []
-    @guessed_correctly = false
   end
 
   def matching_letters (guessed_letter)
@@ -20,6 +19,6 @@ class Word_guesser
         end
       end
     @attempts += 1
-    @guessed_letters_array
+    @guessed_letters_array.join
   end
 end
