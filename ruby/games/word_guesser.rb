@@ -4,20 +4,20 @@ class Word_guesser
   def initialize(word)
     @attempts = 0
     @word = word
-    @word_array = array_convert(@word)
+    @word_array = @word.split('')
     @guessed_letter = ""
     @word_length = word.length
     @guessed_letters_array = []
     @guessed_correctly = false
   end
 
-  def array_convert(word)
-    word.split('')
-  end
+  # def array_convert(word)
+  #   word.split('')
+  # end
 
-  def underscore_array_creator(length)
-    length.times {@guessed_letters_array << "_"}
-  end
+  # def underscore_array_creator(length)
+  #   length.times {@guessed_letters_array << "_"}
+  # end
 
   # def word_checker(guessed_word)
   #   if @word == guessed_word
@@ -32,12 +32,14 @@ class Word_guesser
   # end
 
   def matching_letters (guessed_letter)
-      @word_length.times do |current_iteration|
-        if @word_array[current_iteration.to_i - 1] == guessed_letter
-          @guessed_letters_array[current_iteration.to_i - 1] = guessed_letter
-          @attempts += 1
+      @word_array.each do |letter|
+        if letter == guessed_letter
+          @guessed_letters_array << guessed_letter
+        else
+          @guessed_letters_array << "_"
         end
       end
+    @attempts += 1
     @guessed_letters_array
   end
 end
