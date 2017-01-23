@@ -1,0 +1,19 @@
+Create word guesser class
+
+Create initialize method accepting a string
+  Store string in the @word attribute
+  Store string length in the @world_length attribute
+  Create @word_array attribute and call array converter method
+  Set solved attribute to false
+  Create empty guessed word array equal to length of inserted word and filled with "_"
+
+Create guess method that accepts a string
+  call array converter method and convert the string to an array
+  Check if guessed word is equal to @word and set @solved to true if they do
+  check if each letter of guessed word array exists in original word
+  store the matching letter in guessed word array(in correct position)
+  increase guess counter by one
+  set guessed to false
+
+Create array converter method accepting a string
+  convert and return converted array
