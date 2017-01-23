@@ -25,6 +25,10 @@ class Word_guesser
   end
 
   def done_guessing
-    
+    if @guessed_letters_array == @word_array
+      true
+    else
+      false
+    end
   end
 end
