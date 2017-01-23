@@ -7,9 +7,9 @@ describe Word_guesser do
     expect(guesser.array_convert("potato")).to eq ["p", "o", "t", "a", "t", "o"]
   end
 
-  it "checks if guessed word matched original word" do
-    expect(guesser.word_checker("tomato")).to eq false
-  end
+  # it "checks if guessed word matched original word" do
+  #   expect(guesser.word_checker("tomato")).to eq false
+  # end
 
   it "checks if the array of underscores is the right length" do
     guesser.underscore_array_creator(6)
@@ -17,7 +17,7 @@ describe Word_guesser do
   end
 
   it "returns a string with guessed letters" do
-    guesser.word_checker("tomato")
-    guesser.matching_letters.to eq "_o_ato"
+    guesser.underscore_array_creator(6)
+    expect(guesser.matching_letters("o")).to eq ["_", "o", "_", "_", "_", "o"]
   end
 end
