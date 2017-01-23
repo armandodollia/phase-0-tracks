@@ -9,11 +9,10 @@
 function strReverse(unreversedString)
 {
   var reverseString = "";
-  var inputString = unreversedString;
 
-  for(var i = inputString.length-1; i >= 0; i--)
+  for(var i = unreversedString.length-1; i >= 0; i--)
   {
-    reverseString += inputString.charAt(i);
+    reverseString += unreversedString.charAt(i);
   }
 
   return reverseString;
