@@ -1,5 +1,5 @@
 class Word_guesser
-  attr_reader :attempts, :word_length
+  attr_reader :attempts, :word_length, :attempts, :guessed_letters_array
 
   def initialize(word)
     @attempts = 0
@@ -18,7 +18,13 @@ class Word_guesser
           @guessed_letters_array << "_"
         end
       end
+
     @attempts += 1
+
     @guessed_letters_array.join
+  end
+
+  def done_guessing
+    
   end
 end
