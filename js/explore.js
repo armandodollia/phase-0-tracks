@@ -6,13 +6,17 @@
 //subtract 1 from i every iteration
 //end the loop when i = 0
 
-function strReverse(string){
+function strReverse(unreversedString)
+{
   var reverseString = "";
+  var inputString = unreversedString;
 
-  for(i = string.length-1, i >= 0, i--){
-    reverseString + string.charAt(i);
+  for(var i = inputString.length-1; i >= 0; i--)
+  {
+    reverseString += inputString.charAt(i);
   }
 
   return reverseString;
 }
 
+console.log(strReverse("potato"));
