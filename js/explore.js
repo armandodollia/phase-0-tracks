@@ -18,7 +18,8 @@ function strReverse(unreversedString)
   return reverseString;
 }
 
-//console.log(strReverse("potato"));
+//==================================================
+//DRIVER CODE
 
 var reversedString = strReverse("Hello World");
 
