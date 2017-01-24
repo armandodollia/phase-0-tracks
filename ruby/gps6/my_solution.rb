@@ -4,8 +4,8 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# It copies the code of a class file in the same directory
+# and puts it in the code. Require needs the files location to be inserted
 require_relative 'state_data'
 
 class VirusPredictor
