@@ -18,4 +18,10 @@ function strReverse(unreversedString)
   return reverseString;
 }
 
-console.log(strReverse("potato"));
+//console.log(strReverse("potato"));
+
+var reversedString = strReverse("Hello World");
+
+if("hello" == "hello"){
+  console.log(reversedString);
+}
