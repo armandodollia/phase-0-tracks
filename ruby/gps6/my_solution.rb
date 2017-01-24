@@ -9,6 +9,7 @@
 require_relative 'state_data'
 
 class VirusPredictor
+  #should add getter method for number_of_deaths, speed and state
 
   # Initializes the class and sets the attributes when instantiated
   def initialize(state_of_origin, population_density, population)
@@ -29,6 +30,7 @@ class VirusPredictor
   # Determines the number of deaths based on population density (truncates to an integer)
   def predicted_deaths
     # predicted deaths is solely based on population density
+    # number_of_deaths should be initialized as class attribute allowing for a getter method
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
     elsif @population_density >= 150
@@ -50,7 +52,7 @@ class VirusPredictor
   def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
-    speed = 0.0
+    speed = 0.0 #this can be made into a class attribute allowing a getter
 
     if @population_density >= 200
       speed += 0.5
