@@ -18,6 +18,7 @@ class VirusPredictor
   end
 
   # Calls predicted_deaths and speed_of_spread methods
+  # virus_effects method and private method can be removed completely, allowing the user to just call the encapsulated methods individually
   def virus_effects
     predicted_deaths
     speed_of_spread
@@ -40,6 +41,7 @@ class VirusPredictor
       number_of_deaths = (@population * 0.05).floor
     end
 
+    #Print method can be removed allowing information to be printed in the driver code
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
@@ -61,7 +63,7 @@ class VirusPredictor
     else
       speed += 2.5
     end
-
+    #Print method can be removed allowing information to be printed in the driver code
     puts " and will spread across the state in #{speed} months.\n\n"
 
   end
