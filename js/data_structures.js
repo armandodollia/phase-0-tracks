@@ -37,3 +37,8 @@ var mandoCar = new Car("Nissan", "Altima", "Slate Grey", 2008);
 
 console.log(mandoCar);
 console.log(mandoCar.pressGas("light"));
+
+var lizCar = new Car("Honda", "Civic", "Grey", 2012);
+
+console.log(lizCar.model);
+console.log(lizCar.pressGas("light"));
