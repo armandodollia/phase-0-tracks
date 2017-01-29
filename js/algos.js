@@ -22,12 +22,46 @@ function LongestPhrase(phraseArray){
 }
 
 function KeyValueMatch(object1, object2){
-  
+  this.object1 = object1;
+  this.object2 = object2;
+  var object1Keys = Object.keys(object1); // Stores the keys of the object in an array of strings
+  var object2Keys = Object.keys(object2); // Same as above
+  var isThereMatching = false;
+  // var object1values = Object.values(object1);  <-- Does not work, it is an experimental function
+  // var object2values = Object.values(object2);
+
+  for (var i = 0; i < object1Keys.length; i++) {
+    var key1 = object1Keys[i];
+    var key2 = object2Keys[i];
+    if (key1 == key2 && object1[key1] == object2[key2]) {
+      isThereMatching = true;
+    }
+  }
+  return isThereMatching;
 }
 
-//=============================================
+
+//========================================
 // Driver Code
 testArray = [["long phrase", "kdhsfgkjsdhfgjksdhfgkhsdgh", "longest phrase","longer phrase", "a", "b"], ["a", "abcd", "ab", "abc"], ["12345667", "1234", "12", "12334", "1"]];
 for (var i = 0; i < testArray.length; i++) {
   console.log("The longest phrase in [" + testArray[i] + "] is " + LongestPhrase(testArray[i]));
+}
+
+var pair1 = {name: "Steven", age: 54};
+var pair2 = {name: "Tamir", age: 54};
+var pair3 = {name: "John", age: 35};
+
+if (KeyValueMatch(pair1, pair2)) {
+  console.log("True");
+}
+else{
+  console.log("False");
+}
+
+if (KeyValueMatch(pair1, pair3)) {
+  console.log("True");
+}
+else{
+  console.log("False");
 }
