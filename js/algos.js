@@ -27,7 +27,7 @@ function KeyValueMatch(object1, object2){
   var object1Keys = Object.keys(object1); // Stores the keys of the object in an array of strings
   var object2Keys = Object.keys(object2); // Same as above
   var isThereMatching = false;
-  // var object1values = Object.values(object1);  <-- Does not work, it is an experimental function
+  // var object1values = Object.values(object1);  <-- Does not work, it is an experimental function, should be added when stable for cleaner code
   // var object2values = Object.values(object2);
 
   for (var i = 0; i < object1Keys.length; i++) {
@@ -38,6 +38,22 @@ function KeyValueMatch(object1, object2){
     }
   }
   return isThereMatching;
+}
+
+function RandomString(numberOfStrings){
+  this.numberOfStrings = numberOfStrings;
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+  var stringArray = [];
+
+  for(var i = 0; i < numberOfStrings; i++){
+    var randomWord = "";
+    var stringLength = Math.floor((Math.random() * 10) + 1); // Generates random number between 1 and 10
+    for (var j = 0; j < stringLength; j++) {
+      randomWord += alphabet.charAt(Math.floor(Math.random() * (alphabet.length - 1))); // Stores a random letter of the alphabet and stores it in randomWord
+    }
+    stringArray.push(randomWord);
+  }
+  return stringArray;
 }
 
 
@@ -64,4 +80,10 @@ if (KeyValueMatch(pair1, pair3)) {
 }
 else{
   console.log("False");
+}
+
+
+for (var i = 0; i < 10; i++) {
+  var stringArray = RandomString(i+5);
+  console.log("The longest phrase in [" + stringArray + "] is " + LongestPhrase(stringArray));
 }
