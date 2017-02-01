@@ -27,3 +27,38 @@ Shawn|14|Freshman
 
 5.
 DELETE FROM students WHERE name = "Shawn";
+
+JOINS:
+
+INNER JOIN------------------------------------------------------------------
+SELECT name, grade FROM students INNER JOIN year ON students.year_id=year.id;
+Armando|Freshman
+Nicole|Senior
+David|Junior
+Andrew|Sophomore
+
+LEFT OUTER JOIN--------------------------------------------------------------
+SELECT name, age, grade FROM students LEFT OUTER JOIN year ON students.year_id = year.id;
+Armando|14|Freshman
+Nicole|17|Senior
+David|16|Junior
+Andrew|15|Sophomore
+
+CROSS JOIN-------------------------------------------------------------------
+SELECT name, age, grade FROM students CROSS JOIN year;
+Armando|14|Freshman
+Armando|14|Sophomore
+Armando|14|Junior
+Armando|14|Senior
+Nicole|17|Freshman
+Nicole|17|Sophomore
+Nicole|17|Junior
+Nicole|17|Senior
+David|16|Freshman
+David|16|Sophomore
+David|16|Junior
+David|16|Senior
+Andrew|15|Freshman
+Andrew|15|Sophomore
+Andrew|15|Junior
+Andrew|15|Senior
