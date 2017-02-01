@@ -1,0 +1,29 @@
+1.
+SELECT * FROM students;
+1|Armando|14|1
+2|Nicole|17|4
+3|David|16|3
+4|Andrew|15|2
+5|Shawn|13|1
+
+2.
+UPDATE students SET age=14 WHERE name="Shawn";
+
+3.
+SELECT * FROM students, year WHERE students.year_id = year.id;
+1|Armando|14|1|1|Freshman
+2|Nicole|17|4|4|Senior
+3|David|16|3|3|Junior
+4|Andrew|15|2|2|Sophomore
+5|Shawn|14|1|1|Freshman
+
+4.
+SELECT students.name, students.age, year.grade FROM students JOIN year ON students.year_id=year.id;
+Armando|14|Freshman
+Nicole|17|Senior
+David|16|Junior
+Andrew|15|Sophomore
+Shawn|14|Freshman
+
+5.
+DELETE FROM students WHERE name = "Shawn";
