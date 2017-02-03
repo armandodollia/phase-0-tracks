@@ -34,6 +34,7 @@ puts "Type 'exit' when done"
 rw_prompt = gets.chomp
 
 if rw_prompt == "log"
+  
   #ask user for the number of items they would like to add to their ledger
   puts "How many items would you like to log?"
   number_of_items = gets.chomp.to_i
@@ -46,14 +47,18 @@ if rw_prompt == "log"
       borrower = gets.chomp
       #Store values in database
       lend_item(ledger, item, borrower)
-    end
-  elsif rw_prompt == "view"
+  end
+
+elsif rw_prompt == "view"
+
   # Store items table in a ledger
   logs_table = ledger.execute("SELECT * FROM items")
+
   # iterate through ledger and print items
   logs_table.each do |log|
     puts "#{log['borrower']} has #{log['returned']} the #{log['item']}"
   end
+
 elsif rw_prompt == "return"
   puts "How many items are being returned?"
   number_of_items = gets.chomp.to_i
