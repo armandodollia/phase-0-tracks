@@ -8,6 +8,14 @@ def return_item(ledger, item)
   ledger.execute("UPDATE items SET returned = ? WHERE item=?", [1, item])
 end
 
+def delete_row(ledger, item, borrower)
+  ledger.execute("DELETE FROM items WHERE item = ? AND borrower = ?", [item, borrower])
+end
+
+def delete_borrower(ledger, borrower)
+  ledger.execute("DELETE FROM items WHERE borrower = ?", [borrower])
+end
+
 # Creates ledger database and have it output results as a hash
 ledger = SQLite3::Database.new("ledger.db")
 ledger.results_as_hash = true
@@ -29,13 +37,15 @@ ledger.execute(create_table_cmd)
 rw_prompt = "" # Initialize loop break condition
 until rw_prompt == "exit" # Loop until the user says exit
 # Ask the user whether they would like to add items or view the current ledger
-puts ""
-puts "Type 'log' to add more items to ledger"
+#puts ""
+puts "\nType 'log' to add more items to ledger"
 puts "Type 'return' to set an item as returned"
 puts "Type 'view' to print the ledger"
-puts "Type 'delete' to remove an item from the ledger"
+puts "Type 'delete row' to remove an row from the ledger"
+puts "Type 'delete borrower' to remove all instances a borrower from the ledger"
 puts "Type 'exit' when done"
 rw_prompt = gets.chomp
+puts ""
 
 if rw_prompt == "log"
   
@@ -78,7 +88,13 @@ elsif rw_prompt == "return"
       #set the item as returned
       return_item(ledger, item)
     end
-  end
-elsif rw_prompt == 'delete'
+elsif rw_prompt == 'delete row'
+  puts "Please type the name of the person you want to remove from the database"
+  borrower = gets.chomp
+  puts "Please type the item you want to remove from the database"
+  item = gets.chomp
+  delete_row(ledger, item, borrower)
+elsif rw_prompt = 'delete borrower'
   
+  end
 end
