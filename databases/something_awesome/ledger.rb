@@ -1,11 +1,11 @@
 require 'sqlite3'
 
 def lend_item(ledger, item, borrower)
-  ledger.execute("INSERT INTO items (item, borrower, returned) VALUES (?, ?, 'not returned')", [item, borrower])
+  ledger.execute("INSERT INTO items (item, borrower, returned) VALUES (?, ?, ?)", [item, borrower, 0])
 end
 
 def return_item(ledger, item)
-  ledger.execute("UPDATE items SET returned='returned' WHERE item=?", [item])
+  ledger.execute("UPDATE items SET returned = ? WHERE item=?", [1, item])
 end
 
 # Creates ledger database and have it output results as a hash
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS items(
 id INTEGER PRIMARY KEY,
 item VARCHAR(255),
 borrower VARCHAR(255),
-returned VARCHAR(255)
+returned INT
 )
 SQL
 
@@ -56,7 +56,11 @@ elsif rw_prompt == "view"
 
   # iterate through ledger and print items
   logs_table.each do |log|
-    puts "#{log['borrower']} has #{log['returned']} the #{log['item']}"
+    if log['returned'] == 1
+      puts "#{log['borrower']} has returned the #{log['item']}"
+    else
+      puts "#{log['borrower']} has not returned the #{log['item']}"
+    end
   end
 
 elsif rw_prompt == "return"
