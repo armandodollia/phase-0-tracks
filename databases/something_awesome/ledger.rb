@@ -109,5 +109,11 @@ elsif rw_prompt == 'delete item'
   puts "Please type the name of the item you want to remove from the database"
   item = gets.chomp
   delete_item(ledger, item)
-  end
+
+elsif rw_prompt == 'exit'
+  puts "Thank you for using Armando's ledger program! :)"
+
+else
+  puts "ERROR! I do not recognize that input, please try again"
+end
 end
