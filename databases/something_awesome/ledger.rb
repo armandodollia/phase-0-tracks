@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS items(
 id INTEGER PRIMARY KEY,
 item VARCHAR(255),
 borrower VARCHAR(255),
-returned INT
+returned BOOLEAN
 )
 SQL
 
@@ -29,7 +29,11 @@ ledger.execute(create_table_cmd)
 rw_prompt = "" # Initialize loop break condition
 until rw_prompt == "exit" # Loop until the user says exit
 # Ask the user whether they would like to add items or view the current ledger
-puts "Type 'log' to add more items to ledger, type 'return' to set an item as returned, or type 'view' to print the ledger"
+puts ""
+puts "Type 'log' to add more items to ledger"
+puts "Type 'return' to set an item as returned"
+puts "Type 'view' to print the ledger"
+puts "Type 'delete' to remove an item from the ledger"
 puts "Type 'exit' when done"
 rw_prompt = gets.chomp
 
@@ -75,5 +79,6 @@ elsif rw_prompt == "return"
       return_item(ledger, item)
     end
   end
+elsif rw_prompt == 'delete'
+  
 end
-
