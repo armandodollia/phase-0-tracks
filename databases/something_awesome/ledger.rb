@@ -10,7 +10,7 @@ rw_prompt = "" # Initialize loop break condition
 until rw_prompt == "exit" # Loop until the user says exit
 
 # Ask the user whether they would like to add items or view the current ledger
-puts "\nType 'log' to add more items to ledger"
+puts "\nType 'add' to add more items to ledger"
 puts "Type 'return' to set an item as returned"
 puts "Type 'view' to print the ledger"
 puts "Type 'delete row' to remove an row from the ledger"
@@ -20,7 +20,7 @@ puts "Type 'exit' when done"
 rw_prompt = gets.chomp
 puts ""
 
-if rw_prompt == "log"
+if rw_prompt == "add"
 
   #ask user for the number of items they would like to add to their ledger
   puts "How many items would you like to log?"
