@@ -2,7 +2,9 @@ require 'sqlite3'
 require_relative 'ledger_manager'
 
 #instantiate Ledger_manager class
-ledger_manager = Ledger_manager.new
+ledger = SQLite3::Database.new("ledger.db")
+ledger.results_as_hash = true
+ledger_manager = Ledger_manager.new(ledger)
 
 rw_prompt = "" # Initialize loop break condition
 until rw_prompt == "exit" # Loop until the user says exit
@@ -19,7 +21,7 @@ rw_prompt = gets.chomp
 puts ""
 
 if rw_prompt == "log"
-  
+
   #ask user for the number of items they would like to add to their ledger
   puts "How many items would you like to log?"
   number_of_items = gets.chomp.to_i

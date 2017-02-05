@@ -1,9 +1,10 @@
 require 'sqlite3'
 
 class Ledger_manager
-  def initialize#(ledger)
-    @ledger = SQLite3::Database.new("ledger.db")
-    @ledger.results_as_hash = true
+  def initialize(ledger)
+    # @ledger = SQLite3::Database.new("ledger.db")
+    # @ledger.results_as_hash = true
+    @ledger = ledger
     @create_table_cmd = <<-SQL
     CREATE TABLE IF NOT EXISTS items(
     id INTEGER PRIMARY KEY,
