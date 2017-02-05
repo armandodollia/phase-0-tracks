@@ -3,14 +3,6 @@ require 'sqlite3'
 class Ledger_manager
   def initialize(ledger)
     @ledger = ledger
-    @create_table_cmd = <<-SQL
-    CREATE TABLE IF NOT EXISTS items(
-    id INTEGER PRIMARY KEY,
-    item VARCHAR(255),
-    borrower VARCHAR(255),
-    returned BOOLEAN
-    )
-    SQL
   end
 
   def lend_item(item, borrower)
@@ -45,6 +37,14 @@ class Ledger_manager
   end
 
   def create_table
-    @ledger.execute(@create_table_cmd)
+    create_table_cmd = <<-SQL
+    CREATE TABLE IF NOT EXISTS items(
+    id INTEGER PRIMARY KEY,
+    item VARCHAR(255),
+    borrower VARCHAR(255),
+    returned BOOLEAN
+    )
+    SQL
+    ledger.execute(@create_table_cmd)
   end
 end
