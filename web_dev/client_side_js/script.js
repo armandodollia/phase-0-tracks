@@ -9,6 +9,12 @@ mainHeader.appendChild(mainHeaderText);
 //Add H1 to page
 stored.insertBefore(mainHeader, document.getElementById('lizard-photo'));
 
+//Loop through all li tags and make them yellow
+var listItems = document.getElementsByTagName('li');
+for (var i = 0; i < listItems.length; i++) {
+  listItems[i].style.color = "yellow";
+}
+
 
 
 
