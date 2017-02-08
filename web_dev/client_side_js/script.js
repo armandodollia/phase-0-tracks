@@ -1,4 +1,13 @@
-
+//Store about my pet var
+var stored = document.getElementById("about-my-pet");
+//Create H1 element
+var mainHeader = document.createElement('h1');
+//Create text for main header
+var mainHeaderText = document.createTextNode("This is my awesome chameleon!");
+//append text to main header
+mainHeader.appendChild(mainHeaderText);
+//Add H1 to page
+stored.insertBefore(mainHeader, document.getElementById('lizard-photo'));
 
 
 
