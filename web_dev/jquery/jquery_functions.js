@@ -9,4 +9,12 @@ $(document).ready(function(){
   function(){
     $(this).css("background-color", "white");
   });
+
+  $("h5").on("click", function(){
+    $(this).hide();
+  });
+
+  $("li").on("click", function(){
+    $(this).css("color", "black");
+  });
 });
