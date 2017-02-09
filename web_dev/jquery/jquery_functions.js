@@ -3,5 +3,10 @@ $(document).ready(function(){
     $("li").css("color", "red");
   });
 
-
+  $(".test").hover(function(){
+    $(this).css("background-color", "grey");
+  }, 
+  function(){
+    $(this).css("background-color", "white");
+  });
 });
