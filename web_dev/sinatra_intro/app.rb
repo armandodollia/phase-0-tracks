@@ -50,3 +50,13 @@ end
 get '/contact' do
   "316 East Geneva Rd. Wheaton IL, 60187"
 end
+
+# Write a GET route that takes name as a query parameter
+get '/great_job/' do
+  names = params[:name]
+  if names
+    "Good job, #{names}!"
+  else
+    "Good Job!"
+  end
+end
