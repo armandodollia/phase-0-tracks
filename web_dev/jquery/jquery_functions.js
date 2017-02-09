@@ -29,4 +29,8 @@ $(document).ready(function(){
   $("#gibberish_toggle").click(function(){
     $("#gibberish").toggle("slow");
   });
+
+  $("#fade").click(function(){
+    $("h3").fadeToggle(2000);
+  });
 });
