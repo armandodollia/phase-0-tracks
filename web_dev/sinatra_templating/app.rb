@@ -10,7 +10,6 @@ db.results_as_hash = true
 # show students on the home page
 get '/' do
   @students = db.execute("SELECT * FROM students")
-  p @students
   erb :home
 end
 
@@ -25,19 +24,24 @@ post '/students' do
   redirect '/'
 end
 
+# Asks user to type in a campus and prints all existing campuses
 get '/campus' do
+  @campuses = db.execute("SELECT * FROM campuses")
   erb :new_campuses
 end
 
+# Creates campuses table, stores user input and redirects back to print and input method
 post '/campus/creator' do
   create_table_cmd = <<-SQL
     CREATE TABLE IF NOT EXISTS campuses(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255)
+    campus VARCHAR(255)
     )
     SQL
     db.execute(create_table_cmd)
     db.execute("INSERT INTO campuses (campus) values (?)", [params['campus']])
-    redirect "/campus/printer"
+    redirect '/campus'
 end
+
+
 # add static resources
