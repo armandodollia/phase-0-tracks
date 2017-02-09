@@ -8,3 +8,6 @@
 4. .....
 5. Profit!
 
+##Effective strategies
+
+The most effective strategy was going through the w3schools lesson on jquery and doing those exercises.
