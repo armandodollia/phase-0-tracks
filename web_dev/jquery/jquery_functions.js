@@ -10,8 +10,16 @@ $(document).ready(function(){
     $(this).css("background-color", "white");
   });
 
-  $("h5").on("click", function(){
-    $(this).hide();
+  $("h5").on({
+    click: function(){
+      $(this).hide();
+    },
+    mouseenter: function(){
+      $(this).css({'font-size': '150%', 'color': 'red'});
+    },
+    mouseleave: function(){
+      $(this).css('font-size', '100%');
+    }
   });
 
   $("li").on("click", function(){
