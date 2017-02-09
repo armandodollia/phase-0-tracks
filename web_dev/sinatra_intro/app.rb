@@ -68,3 +68,18 @@ get '/add/:number1/:number2' do
   sum = number1 + number2
   "The sum of #{number1} and #{number2} is #{sum}"
 end
+
+# Write a GET route that returns all students of that age
+get '/student_age/:age' do
+  age = params[:age]
+  students = db.execute("SELECT * FROM students WHERE age=?", [age])
+  students.to_s
+  response = ""
+  students.each do |student|
+    response << "ID: #{student['id']}<br>"
+    response << "Name: #{student['name']}<br>"
+    response << "Age: #{student['age']}<br>"
+    response << "Campus: #{student['campus']}<br><br>" 
+  end
+  response
+end
