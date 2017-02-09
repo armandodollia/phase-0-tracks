@@ -25,4 +25,8 @@ $(document).ready(function(){
   $("li").on("click", function(){
     $(this).css("color", "black");
   });
+
+  $("#gibberish_toggle").click(function(){
+    $("#gibberish").toggle("slow");
+  });
 });
